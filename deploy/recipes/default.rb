@@ -7,5 +7,5 @@
 # output all apps
 
 data_bag("aws_opsworks_app").each do |app|
-    log "Chef::JSONCompat.to_json_pretty(#{app})"
+    log Chef::JSONCompat.to_json_pretty(app)
 end
