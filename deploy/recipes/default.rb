@@ -9,3 +9,7 @@
 data_bag("aws_opsworks_app").each do |app|
     log Chef::JSONCompat.to_json_pretty(data_bag_item("aws_opsworks_app", app))
 end
+
+data_bag("aws_opsworks_command").each do |cmd|
+    log Chef::JSONCompat.to_json_pretty(data_bag_item("aws_opsworks_command", cmd))
+end

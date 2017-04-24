@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: undeploy
-# Recipe:: default
+# Cookbook Name:: deploy
+# Recipe:: undeploy
 #
 # Copyright (c) 2017 The Authors, All Rights Reserved.
 
