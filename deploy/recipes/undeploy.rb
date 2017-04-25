@@ -11,8 +11,10 @@ apps.each do |app|
 end
 
 log "====> Example of using aws_opsworks_command data_bag"
-command = search("aws_opsworks_command", "type:undeploy").first
-command["args"]["app_ids"].each do |my_app_id|
+commands = search("aws_opsworks_command", "type:undeploy")
+commands.each do |command|
+  command["args"]["app_ids"].each do |my_app_id|
     app = search("aws_opsworks_app", "app_id:#{my_app_id}").first
     log "Application #{app['name']} should be UNdeployed from the directory #{app['attributes']['document_root']} on instance #{command['instance_id']}."
+  end
 end
