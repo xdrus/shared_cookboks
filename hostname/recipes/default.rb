@@ -7,4 +7,4 @@
 # output timezone
 puts(">>>>>>>>> Hostname is #{node['hostname']} <<<<<<<<<<")
 log ">>>>>>>>> node['myapache']['port'] type is <<<<<<<<<<" 
-log type(node['myapache']['port'])
+log node['myapache']['port'].class
